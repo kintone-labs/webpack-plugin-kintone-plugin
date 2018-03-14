@@ -47,6 +47,10 @@ class KintonePlugin implements Plugin {
       this.privateKey = fs.readFileSync(privateKeyPath, 'utf-8');
       if (compiler.options.watch) {
         this.watchAssets();
+      } else {
+        compiler.hooks.afterEmit.tapPromise(this.name, compilation =>
+          this.generatePlugin()
+        );
       }
     });
   }
