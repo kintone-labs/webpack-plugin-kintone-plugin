@@ -27,4 +27,5 @@ cache:
 version: "{build}"
 
 # https://github.com/appveyor/ci/issues/882
+# This seems not to resolve the problems because the first pusing branch doesn't have the PR for it
 skip_branch_with_pr: true
