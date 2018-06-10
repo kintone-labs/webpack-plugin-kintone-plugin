@@ -16,11 +16,15 @@ const customNamePluginZipPath = path.resolve(
   'nfjiheanbocphdnoehhpddjmkhciokjb.sample.plugin.zip'
 );
 
-const runWebpack = (config = 'webpack.config.js') =>
-  spawnSync(
+const runWebpack = (config = 'webpack.config.js') => {
+  const npmBin = spawnSync('npm', ['bin'], {
+    cwd: pluginDir,
+    shell: true
+  }).stdout.toString().replace('\n', '');
+  return spawnSync(
     'node',
     [
-      path.resolve('node_modules', 'webpack-cli', 'bin', 'webpack.js'),
+      npmBin + path.sep + 'webpack',
       '--config',
       config,
       '--mode',
@@ -30,6 +34,7 @@ const runWebpack = (config = 'webpack.config.js') =>
       cwd: pluginDir
     }
   );
+}
 
 const verifyPluginZip = (zipPath: string) => {
   assert(fs.existsSync(zipPath));
