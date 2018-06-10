@@ -21,6 +21,7 @@ const runWebpack = (config = 'webpack.config.js') => {
     cwd: pluginDir,
     shell: true
   }).stdout.toString().replace('\n', '');
+  console.log(`npmBin is ${npmBin}`);
   return spawnSync(
     'node',
     [
