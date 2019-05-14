@@ -9,12 +9,12 @@ describe("plugin", () => {
   describe("getAssetPaths", () => {
     it("should return asset file paths from the manifest.json", () => {
       assert.deepStrictEqual(plugin.getAssetPaths(MANIFEST_JSON_FILE), [
-        path.resolve(SAMPLE_PLUGIN_PATH, 'js/customize.js'),
-        path.resolve(SAMPLE_PLUGIN_PATH, 'css/desktop.css'),
-        path.resolve(SAMPLE_PLUGIN_PATH, 'js/customize.js'),
-        path.resolve(SAMPLE_PLUGIN_PATH, 'css/mobile.css'),
+        path.resolve(SAMPLE_PLUGIN_PATH, "js/customize.js"),
+        path.resolve(SAMPLE_PLUGIN_PATH, "css/desktop.css"),
+        path.resolve(SAMPLE_PLUGIN_PATH, "js/customize.js"),
+        path.resolve(SAMPLE_PLUGIN_PATH, "css/mobile.css"),
         MANIFEST_JSON_FILE,
-        path.resolve(SAMPLE_PLUGIN_PATH, 'image/icon.png')
+        path.resolve(SAMPLE_PLUGIN_PATH, "image/icon.png")
       ]);
     });
   });
