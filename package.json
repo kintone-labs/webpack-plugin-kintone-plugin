@@ -13,7 +13,9 @@
     "release": "run-s build lint test && standard-version",
     "release:dryrun": "standard-version --dry-run",
     "unittest": "mocha --require ts-node/register --watch-extensions ts test/**/*-test.ts",
-    "test": "run-s build unittest"
+    "test": "run-s build unittest",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [
     "webpack",
@@ -56,6 +58,8 @@
     "@kintone/plugin-packer": "^2.0.1",
     "chokidar": "^2.1.6",
     "lodash": "^4.17.11",
-    "mkdirp": "^0.5.1"
-  }
+    "mkdirp": "^0.5.1",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
