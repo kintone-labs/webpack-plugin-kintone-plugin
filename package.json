@@ -1,6 +1,6 @@
 {
   "name": "@kintone/webpack-plugin-kintone-plugin",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "A webpack plugin to generate a plugin zip",
   "main": "dist/src/index.js",
   "engines": {
@@ -42,10 +42,10 @@
     "prettier": "^1.19.1",
     "rimraf": "^3.0.0",
     "standard-version": "^7.0.1",
-    "ts-node": "^8.5.2",
+    "ts-node": "^8.5.4",
     "tslint": "^5.20.1",
     "tslint-plugin-prettier": "^2.0.1",
-    "typescript": "^3.7.2",
+    "typescript": "^3.7.3",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   },
@@ -53,7 +53,7 @@
     "webpack": "^4.0.0"
   },
   "dependencies": {
-    "@kintone/plugin-packer": "^2.0.6",
+    "@kintone/plugin-packer": "^2.0.7",
     "chokidar": "^3.3.0",
     "lodash": "^4.17.15",
     "mkdirp": "^0.5.1"
